@@ -1,0 +1,37 @@
+1. for loop
+1) Associate True with the variable "is_ascending" if the list numbers is in ascending order. 
+Otherwise, associate False with "is_ascending".
+
+is_ascending = True
+for i in range(1, len(numbers)):
+  if numbers[i] < numbers[i-1]:
+      is_ascending = False
+
+2) Given a positive integer n, assign True to "is_prime" if n has no factors other than 1 and itself.
+
+is_prime = True
+for i in range(2, n):
+  if n%i == 0:
+      is_prime = False
+
+2. while loop and it's sentinel
+You work for a bakery that sells two items: muffins and cupcakes. The number of muffins and cupcakes in your shop 
+at any given time is stored in the variables muffins and cupcakes, which have been defined for you. 
+Write a program that takes strings from standard input indicating what your customers are buying
+("muffin" for a muffin, "cupcake" for a cupcake). If they buy a muffin, decrease muffins by one, 
+and if they buy a cupcake, decrease cupcakes by 1. If there is no more of that baked good left, print ("Out of stock"). 
+Once you are done selling, input "0", and have the program print out the number of muffins and cupcakes remaining, 
+in the form "muffins: 9 cupcakes: 3" (if there were 9 muffins and 3 cupcakes left, for example).
+
+order = input()
+while order != "0":
+  if order == "muffin":
+      if muffins > 0:
+          muffins -= 1
+      else: print("Out of stock")
+  elif order == "cupcake":
+      if cupcakes > 0:
+          cupcakes -= 1
+      else: print("Out of stock")
+  order = input()   # always remember to put the sentinel here!
+print("muffins: ", muffins, "cupcakes: ", cupcakes)
