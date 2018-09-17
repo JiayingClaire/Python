@@ -1,1 +1,1 @@
-# helpful learning materials of Python
+# learning materials & practice of Python
